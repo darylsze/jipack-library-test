@@ -1,6 +1,9 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven'
+//新添加
+//apply plugin: 'com.novoda.bintray-release'
 
 group='com.github.darylsze'
 
@@ -39,3 +42,13 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+publish {
+    userOrg = 'novoda'
+    groupId = 'com.novoda'
+    artifactId = 'bintray-release'
+    publishVersion = '0.6.1'
+    desc = 'Oh hi, this is a nice description for a project, right?'
+    website = 'https://github.com/novoda/bintray-release'
+}
+
